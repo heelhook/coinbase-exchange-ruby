@@ -160,9 +160,9 @@ module Coinbase
       end
       alias_method :buy, :bid
 
-      def bid_market(funds, params = {})
+      def bid_market(size, params = {})
         params[:product_id] ||= @default_product
-        params[:funds] = funds
+        params[:size] = size
         params[:side] = "buy"
         params[:type] = "market"
         
